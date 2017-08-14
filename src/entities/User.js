@@ -2,8 +2,8 @@
 
 class User{
 
-    constructor(login='lora1234567',
-                password='lora1234567lora1234567') {
+    constructor(login='lora123456',
+                password='lora123456lora123456') {
         this._login = login;
         this._password = password;
     }

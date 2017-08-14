@@ -12,7 +12,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        '.test/specs/*_spec.js'
+        './test/specs/*_spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -46,7 +46,7 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome'
+        browserName: 'firefox'
     }],
     //
     // ===================
@@ -60,7 +60,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'data',
+    logLevel: 'error',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -160,9 +160,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function () {
-    //     browser.windowHandleMaximize();
-    // },
+    before: function () {
+        browser.windowHandleMaximize();
+    },
     //
     /**
      * Hook that gets executed before the suite starts
