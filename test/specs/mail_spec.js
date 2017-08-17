@@ -29,7 +29,7 @@ describe('check creating and sending a new message', ()=> {
         pages.mailPage.subject.setValue(letter.subject);
         pages.mailPage.text.setValue(letter.text);
         pages.mailPage.send.click();
-        let message = pages.mailPage.messageAfterSend().getText();
+        let message = pages.mailPage.messageAfterSend.getText();
         expect(message).to.contain('Письмо успешно отправлено адресатам');
     });
 });
